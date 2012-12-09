@@ -1,0 +1,125 @@
+html { margin:0px; padding:0px; font-family:verdana, arial, sans-sarif; color:#fff;}
+body { float:left; width:100%; background:#423C3D; }
+#outsideWrapper { width:100%; max-width:960px; margin:0px auto; 
+ }
+ a { color:#0138b5; text-decoration:none; }
+ a:hover { color:#ffcb2d; }
+#pageWrapper, #modalWindow { color:#444; margin-top:10px; box-shadow:0px 0px 25px #ccc; width:100%; float:left; padding:10px;
+border:10px solid #595C5E; 
+-moz-border-radius:8px;
+border-radius:8px;
+background:#EDF0F2;
+}
+h1, h2 { text-indent:-1000px; overflow:hidden; margin: 10px 0px;
+height: 75px;}
+.navContainer { float:left; width:100%; padding:10px 0px; margin:10px 0px; margin-bottom:20px; }
+a.navButton, #loginForm input.submit, #signUpForm input.submit { width:auto; margin:15px; text-shadow:1px 1px 0px #797C7E; border:2px solid #FFD82D; padding:8px 12px; color:#FFF;
+font-weight:bold;
+-moz-border-radius:5px;
+border-radius:5px;
+text-decoration:none;
+overflow:hidden; 
+background:#FFE130;
+background: -moz-linear-gradient(center top , 
+#FFF028 0%, 
+#FFE130 15%, 
+#FFD82D 100%) repeat scroll 0 0 
+transparent;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,
+#FFF028), color-stop(15%,
+#FFE130), color-stop(100%,
+#FFD82D));
+background: -webkit-linear-gradient(top, 
+#FFF028 0%,
+#FFE130 15%,
+#FFD82D 100%);
+background: linear-gradient(top, 
+#FFF028 0%,
+#FFE130 15%,
+#FFD82D 100%);
+}
+a.navButton:hover, #loginForm input.submit:hover, #signUpForm input.submit:hover { cursor:pointer;
+background: -moz-linear-gradient(center top , 
+#FFF028 0%, 
+#FFD82D 15%, 
+#FFE130 100%) repeat scroll 0 0 
+transparent;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,
+#FFF028), color-stop(15%,
+#FFD82D), color-stop(100%,
+#FFE130));
+background: -webkit-linear-gradient(top, 
+#FFF028 0%,
+#FFD82D 15%,
+#FFE130 100%);
+background: linear-gradient(top, 
+#FFF028 0%,
+#FFD82D 15%,
+#FFE130 100%);
+}
+h2.abTesting, h2.epGreedy { background: transparent url(../images/h2background.png) no-repeat; width:173px; }
+
+h2.epGreedy { background-position:0px -75px; }
+.mainH1 { background:transparent url(../images/headerImage.png) no-repeat; width:464px; height:68px; }
+.theoryH1 { background:transparent url(../images/theoryImage.png) no-repeat; }
+p { color:#423C3D; margin:5px 0px; line-height:115%; width:98%; }
+#leftSide { width:63%; max-width:600px; margin-right:3%; float:left; padding:0px 1%; }
+#rightSide { width:25%; max-width:220px; float:left; padding:0px 2em; }
+.bigYellowContainer {
+background: -moz-linear-gradient(center top , 
+#ffffff 0%, 
+#fafafa 25%, 
+#EDF0F2 100%) repeat scroll 0 0 
+transparent;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,
+#ffffff), color-stop(25%,
+#fafafa), color-stop(100%,
+#EDF0F2));
+background: -webkit-linear-gradient(top, 
+#ffffff 0%,
+#fafafa 25%,
+#EDF0F2 100%);
+background: linear-gradient(top, 
+#ffffff 0%,
+#fafafa 25%,
+#EDF0F2 100%);
+ float:left; padding:10px; margin-bottom:10px; border:10px solid #FFF028; -moz-border-radius:8px; border-radius:8px; width:100%; }
+.bigYellowContainer ul { list-style:none; margin:0px; padding:0px 10px; }
+.bigYellowContainer ul li { float:left; width:100%; margin-bottom:10px; }
+.bigYellowContainer p { line-height:125%; }
+#signUpForm input, #loginForm input { width:95%;
+background: -moz-linear-gradient(center top , 
+#ffffff 0%, 
+#fafafa 25%, 
+#EDF0F2 100%) repeat scroll 0 0 
+transparent;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,
+#ffffff), color-stop(25%,
+#fafafa), color-stop(100%,
+#EDF0F2));
+background: -webkit-linear-gradient(top, 
+#ffffff 0%,
+#fafafa 25%,
+#EDF0F2 100%);
+background: linear-gradient(top, 
+#ffffff 0%,
+#fafafa 25%,
+#EDF0F2 100%);
+
+
+
+font-size:18px; border:1px solid #AAD3EF; padding:3px 5px; -moz-border-radius:5px; border-radius:5px; float:left; margin-bottom:10px;}
+#signUpForm span.formLabel,#loginForm span.formLabel  { float:left; width:100%; }
+#signUpForm { font-size:18px; } 
+#loginForm { font-size:18px; }
+#loginForm { float:left; width:38%; padding:0px 5px; }
+#signUpForm { float:left; width:58%; padding:0px 5px; }
+#modalOverlay { display:none; opacity:0; position:absolute; width:100%; text-align:center; float:left; height:100%; top:0; }
+#modalWindow { position:relative; width:600px; margin:25px auto; text-align:left; }
+#modalInterior { float:left; width:100%; padding:10px; }
+
+table.gridTable { float:left; width:100%; font-size:14px; }
+table.gridTable tr.gridHeader td { font-weight:bold; color:#444; }
+table.gridTable td { color:#555; }
+
+.moreInfo { height:0px; float:left; width:100%; overflow:hidden; }
