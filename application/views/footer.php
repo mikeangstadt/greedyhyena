@@ -2,7 +2,7 @@
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-10968174-14']);
+  _gaq.push(['_setAccount', 'UA-10968174-xx']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -26,15 +26,15 @@
 		
 		if($width < 350 || $height < 500)
 		{
-			$("h1").addClass("small");
-			$("h2").addClass("small");
+			$("head").append("<link name='mobile' type='text/css' REL='stylesheet' HREF='\mobileStyles.css'></style>");
 		}
 		else 
 		{
-			$("h1").removeClass("small");
-			$("h2").removeClass("small");
+			$("link[name=mobile]").remove();
 		}	
 	}
+	
+	//make an ajax postback to sign-up the user
     function signUpPostback()
     {
       var form = document.forms["signUpForm"];

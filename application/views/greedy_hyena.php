@@ -1,4 +1,9 @@
 <script type="text/javascript" charset="utf-8">
+//Greedy_Hyena API Libraries v1.3 - same domain inclusion (self-hosted Greedy Hyena)
+//written by: Michael Angstadt
+//creation date: 12/19/11
+//description: replaces any Greedy Hyena testing elements
+//included on the page 
 jQuery(document).ready(function(){
 
   $("[class^=gh_]").each(function(intIndex){
@@ -12,6 +17,8 @@ jQuery(document).ready(function(){
 
 });
 
+//get a variant using the decision logic
+//based on the test ID and applicable $apiKey and $userID
 function getVariant(tID)
 {
 var api_key = <?php echo $apiKey; ?>;

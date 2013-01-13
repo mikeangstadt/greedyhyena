@@ -1,5 +1,9 @@
 <?php
-
+//Greedy_Hyena API Libraries v1.3 - for cross-domain inclusion
+//written by: Michael Angstadt
+//creation date: 12/19/11
+//description: replaces any Greedy Hyena testing elements
+//included on the page 
 echo '$(document).ready(function(){
 
   $("[class^=gh_]").each(function(intIndex){

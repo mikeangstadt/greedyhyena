@@ -1,5 +1,9 @@
 <?php
-
+//Greedy_Hyena API Libraries v1.3 - for cross-domain inclusion
+//written by: Michael Angstadt
+//creation date: 12/19/11
+//description: replaces any Greedy Hyena testing elements
+//included on the page 
 echo '$(document).ready(function(){
 
   $("[class^=gh_]").each(function(intIndex){
@@ -13,12 +17,17 @@ echo '$(document).ready(function(){
 
 });
 
+//get a variant using the decision logic
+//based on the test ID and applicable $apiKey and $userID
+//past via the jsonp ajax post
 function getVariant(tID)
 {
 var api_key = '.$_GET["apiKey"].';
 var user_id = '.$_GET["userID"]';
 var test_id = tID;
 
+//get a variant from epsilon greedy & display it using the embedded
+//callback function
  var surl =  "http://www.epsilongreedy.com/getVariant?apiKey="+api_key+"&userID="+user_id+"&tID="+test_id+"&callback=?";
     var me = $(this);
     $.ajax(surl, {
