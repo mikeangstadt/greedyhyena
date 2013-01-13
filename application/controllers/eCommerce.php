@@ -2,21 +2,6 @@
 
 class ECommerce extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
     $data['mainContent'] = '<img style="position:relative; top:-10px; left:-10px; clear:both;margin:0px auto;" src="'.base_url().'images/eCommerceSplitTesting.jpg" />';
@@ -27,5 +12,5 @@ class ECommerce extends CI_Controller {
 	}
 }
 
-/* End of file home.php */
-/* Location: ./application/controllers/theory.php */
+/* End of file ecommerce.php */
+/* Location: ./application/controllers/eCommerce.php */
