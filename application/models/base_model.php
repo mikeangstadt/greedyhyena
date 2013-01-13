@@ -1,20 +1,25 @@
 <?php
 /* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * written by: Michael Angstadt
+ * date: 11/12/10
+ * base_model extends the core CI model functionality
+ * to provide CRUD method support.
  */
-class base_model extends CI_Model
+abstract class base_model extends CI_Model
 {
     var $table_name = "";
     var $table_pk = "id";
 
-    //gets all of the records from the database
+    //gets all of the records from the database from
+    //the given table
     function GetAll()
     {
         $query = $this->db->select('*')->from($this->table_name)->get();
         return $query->result();
     }
-
+    
+    //Helper method to fetch next incremental id
+    //for the given table
     function GetNextId()
     {
         $query = $this->db->select('*')->from($this->table_name);
@@ -27,10 +32,12 @@ class base_model extends CI_Model
         
         $lastUser =  $query->result();
         
-        return $lastUser[0]->id + 1;
+        return ++$lastUser[0]->id;
     }
 
     //gets all of the records based on some condition from the database
+    //conditions is a key=>value associative array with valid column names
+    //for the keys
     function GetAllBy($conditions)
     {
          return $this->FetchAll($this->table_name, $conditions);
@@ -43,7 +50,9 @@ class base_model extends CI_Model
         $this->db->insert($this->table_name, $element);
     }
 
-    //delete all elements that match the $conditions past
+    //delete all elements that match the $conditions associative
+    //array passed
+    //PRE: $conditional's keys are valid columns in the give table
     function DeleteAll($conditionals)
     {
 
@@ -57,7 +66,9 @@ class base_model extends CI_Model
         $this->db->delete($this->table_name);
     }
 
-
+    //update the element in the database which
+    //matches the primary key in the associative array
+    //passed
     function Update($element)
     {
        $this->db->where($this->table_pk, $element[$this->table_pk]);
@@ -87,7 +98,9 @@ class base_model extends CI_Model
           }
        }
     }
-
+  
+    //fetch all records from the given table
+    //that match the $conditionals passed.
     function FetchAll($table, $conditionals)
     {
         $this->db->select('*')->from($table);

@@ -1,7 +1,8 @@
 <?php
 /* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * written by: Michael Angstadt
+ * date: 12/12/11
+ * variant_model 
  */
 require_once 'base_model.php';
 
@@ -12,6 +13,7 @@ class variant_model extends base_model
         $this->table_name = "variant_table";     
     }
 	
+	//increment the specified variant's conversion count
 	public function addConversion($variant)
 	{
 		$updateVariant;
@@ -22,6 +24,7 @@ class variant_model extends base_model
 		$this->UpdateOrInsert($updateVariant);
 	}
 	
+	//increment the specified variant's impression count
 	public function addView($variant)
 	{
 		$updateVariant;
@@ -31,6 +34,8 @@ class variant_model extends base_model
 		$this->UpdateOrInsert($updateVariant);
 	}
 	
+	//increment the specific variant's earned revenue value by
+	//the supplied value
 	public function addRevenue($variant, $revenue)
 	{
 		$updateVariant;
@@ -41,6 +46,10 @@ class variant_model extends base_model
 		$this->UpdateOrInsert($updateVariant);
 	}
 }
+
+//a container class to house
+//variant records fetched & passed
+//to the database
 class Variant
   {
     var $id;
@@ -54,6 +63,8 @@ class Variant
     var $date_created;
     var $active;
 	
+	//compute the conversion rate for
+	//this specific instance
 	public function ConversionRate()
 	{
 		if(isset($views) && $views > 0)

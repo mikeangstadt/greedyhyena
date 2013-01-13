@@ -1,7 +1,9 @@
 <?php
 /* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * written by: Michael Angstadt
+ * date: 12/12/11
+ * campaigns_model to organize groups of tests
+ * across an entire campaign
  */
 require_once 'base_model.php';
 
@@ -12,6 +14,9 @@ class campaigns_model extends base_model
         $this->table_name = "campaigns_table";     
     }
 }
+
+//a container class used to fetch
+//campaign records from the database
 class Campaign
   {
     var $id;

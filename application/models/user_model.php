@@ -1,7 +1,10 @@
 <?php
 /* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * written by: Michael Angstadt
+ * date: 12/12/11
+ * user_model to access & interact with the 
+ * user database table and handle
+ * user password resets
  */
 require_once 'base_model.php';
 
@@ -13,6 +16,8 @@ class user_model extends base_model
     }
     // --------------------------------------------------------------------
 
+	//fetch the contact info for the user
+	//with the specified ID
 	function getContactInfo($id)
 	{
 		$this->db->where('id', $id);
@@ -106,6 +111,9 @@ class user_model extends base_model
 		}
 	}
 }
+
+//container class to fetch user
+//records into from the database
 class User
   {
     var $id;
