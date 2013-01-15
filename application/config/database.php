@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'greedyhyena.db.7777640.hostedresource.com';
-$db['default']['username'] = 'greedyhyena';
-$db['default']['password'] = 'S3ll0ut247';
-$db['default']['database'] = 'greedyhyena';
+$db['default']['hostname'] = 'yourhostname';
+$db['default']['username'] = 'yourusername';
+$db['default']['password'] = '********';
+$db['default']['database'] = 'yourdatabase';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
